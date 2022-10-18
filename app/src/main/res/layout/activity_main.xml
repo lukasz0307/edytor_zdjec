@@ -27,16 +27,32 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/text"
         android:layout_centerHorizontal="true"
-        android:max="100"
+        android:max="10"
         android:min="0"
         android:id="@+id/transparency"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obrót"
+        android:layout_below="@+id/transparency"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text2"
+        />
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rotate"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text2"
         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/transparency"
+        android:layout_below="@+id/rotate"
         android:layout_centerHorizontal="true"
         android:onClick="click"
+        android:id="@+id/but"
         />
 
 </RelativeLayout>
