@@ -12,6 +12,13 @@
         android:src="@drawable/foto"
         android:layout_centerHorizontal="true"
         android:id="@+id/image"
+
+        />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image_filter"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -66,6 +73,63 @@
         android:id="@+id/rotate_right"
         android:background="@drawable/ic_baseline_rotate_90_degrees_cw_24"
         />
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rotate_left"
+        android:layout_centerHorizontal="true"
+        android:min="0"
+        android:max="255"
+        android:id="@+id/seekbar_r"
+        android:paddingTop="10dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/seekbar_r"
+        android:text="R"
+        android:layout_below="@+id/rotate_left"
+        android:textSize="20dp"
+        />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_r"
+        android:layout_centerHorizontal="true"
+        android:min="0"
+        android:max="255"
+        android:id="@+id/seekbar_g"
+        android:paddingTop="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/seekbar_g"
+        android:text="G"
+        android:layout_below="@+id/seekbar_r"
+        android:textSize="20dp"
+        />
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_g"
+        android:layout_centerHorizontal="true"
+        android:min="0"
+        android:max="255"
+        android:id="@+id/seekbar_b"
+        android:paddingTop="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/seekbar_b"
+        android:text="B"
+        android:layout_below="@+id/seekbar_g"
+        android:textSize="20dp"
+        />
+
 
 
 </RelativeLayout>
