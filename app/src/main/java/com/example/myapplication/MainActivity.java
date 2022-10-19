@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 float transparency;
-float rotateX;
+int rotation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +41,9 @@ float rotateX;
         seekBar_rotate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-           rotateX= (float) (progress*0.1);
-           imageview.setRotationY(rotateX);
+           rotation= progress;
+           imageview.setRotation(rotation);
+
         }
 
         @Override
@@ -56,10 +57,13 @@ float rotateX;
         }
     });
     }
-    public void click(View view){
-        TextView text=(TextView) findViewById(R.id.text);
+    public void left_rotation(View view){
+        ImageView imageview=(ImageView) findViewById(R.id.image);
+        imageview.setRotation(imageview.getRotation()-90);
+    }
 
-
-
+    public void right_rotation(View view){
+        ImageView imageview=(ImageView) findViewById(R.id.image);
+        imageview.setRotation(imageview.getRotation()+90);
     }
 }
