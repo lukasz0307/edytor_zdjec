@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <ImageView
+        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:src="@drawable/foto"
@@ -15,6 +17,7 @@
 
         />
     <TextView
+        android:layout_marginTop="50dp"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
@@ -128,6 +131,24 @@
         android:text="B"
         android:layout_below="@+id/seekbar_g"
         android:textSize="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/turn_off"
+        android:text="Łukasz Jankowiak 4PR"
+        android:textSize="20dp"
+        android:paddingTop="40dp"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_b"
+        android:id="@+id/turn_off"
+        android:text="Wyłącz filtr koloru"
+        android:onClick="turn_off"
+        android:layout_centerHorizontal="true"
         />
 
 

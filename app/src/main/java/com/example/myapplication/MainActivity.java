@@ -34,6 +34,7 @@ int r,g,b;
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
            transparency= (float) (progress*0.1);
            imageview.setAlpha(transparency);
+
         }
 
         @Override
@@ -128,6 +129,7 @@ int r,g,b;
         TextView image_filter=(TextView)findViewById(R.id.image_filter);
         imageview.setRotation(imageview.getRotation()-90);
         image_filter.setRotation(image_filter.getRotation()-90);
+
     }
 
     public void right_rotation(View view){
@@ -136,9 +138,15 @@ int r,g,b;
         imageview.setRotation(imageview.getRotation()+90);
         image_filter.setRotation(image_filter.getRotation()+90);
     }
+    public void turn_off(View view){
+
+        TextView image_filter=(TextView)findViewById(R.id.image_filter);
+       image_filter.setVisibility(View.INVISIBLE);
+    }
     public void rgb(){
        TextView image_filter=(TextView) findViewById(R.id.image_filter);
         image_filter.setBackgroundColor(Color.rgb(r,g,b));
+        image_filter.setVisibility(View.VISIBLE);
     }
 
 }
